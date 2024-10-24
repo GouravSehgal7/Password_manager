@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: Password_data
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  
+      MYSQL_DATABASE: ${MYSQL_DATABASE}              
+      MYSQL_USER: ${MYSQL_USER}                      
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}              
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data-new:/var/lib/mysql-new 
+    networks:
+      - my-network-new 
+  
+  
+
+volumes:
+  mysql-data-new:
+    driver: local
+
+networks:
+  my-network-new:
+    driver: bridge

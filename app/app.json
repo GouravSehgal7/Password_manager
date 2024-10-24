@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "app",
+    "slug": "app",
+     "scheme": "your-app-scheme",
+    "version": "1.0.0",
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
